@@ -1,6 +1,6 @@
 {
   "name": "react-native-move-to-background",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React native action to move app to background",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
