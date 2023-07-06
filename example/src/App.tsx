@@ -4,11 +4,9 @@ import { StyleSheet, View, Text } from 'react-native';
 import { moveToBackground } from 'react-native-move-to-background';
 
 export default function App() {
-
   React.useEffect(() => {
     setTimeout(() => {
       moveToBackground();
-      
     }, 6000);
   }, []);
 

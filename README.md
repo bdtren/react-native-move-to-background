@@ -13,9 +13,8 @@ npm install react-native-move-to-background
 ```js
 import { moveToBackground } from 'react-native-move-to-background';
 
-// ...
-
-    moveToBackground();
+// call the function
+moveToBackground();
 ```
 
 ## Contributing
