@@ -1,8 +1,14 @@
 @objc(MoveToBackground)
 class MoveToBackground: NSObject {
 
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-    resolve(a*b)
+  @objc(moveToBackground:withRejecter:)
+  func moveToBackground(resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
+      DispatchQueue.main.async {
+          let application = UIApplication.shared
+          let suspend = #selector(URLSessionTask.suspend)
+          application.sendAction(suspend, to: application, from: nil, for: nil)
+      }
+    
+    resolve(true)
   }
 }

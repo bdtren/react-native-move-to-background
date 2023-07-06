@@ -11,11 +11,11 @@ npm install react-native-move-to-background
 ## Usage
 
 ```js
-import { multiply } from 'react-native-move-to-background';
+import { moveToBackground } from 'react-native-move-to-background';
 
 // ...
 
-const result = await multiply(3, 7);
+    moveToBackground();
 ```
 
 ## Contributing

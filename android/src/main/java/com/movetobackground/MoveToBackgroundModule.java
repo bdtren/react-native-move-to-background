@@ -1,5 +1,8 @@
 package com.movetobackground;
 
+import android.app.Activity;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Promise;
@@ -26,7 +29,12 @@ public class MoveToBackgroundModule extends ReactContextBaseJavaModule {
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  public void multiply(double a, double b, Promise promise) {
-    promise.resolve(a * b);
+  public void moveToBackground() {
+    Activity activity = getCurrentActivity();
+    if (activity != null) {
+      activity.moveTaskToBack(true);
+    } else {
+        Log.e("MoveToBackgroundPlugin", "moveToBackground failed: activity=null");
+      }
   }
 }

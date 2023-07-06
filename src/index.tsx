@@ -17,6 +17,6 @@ const MoveToBackground = NativeModules.MoveToBackground
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return MoveToBackground.multiply(a, b);
+export function moveToBackground(): Promise<void> {
+  return MoveToBackground.moveToBackground();
 }

@@ -1,18 +1,20 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-move-to-background';
+import { moveToBackground } from 'react-native-move-to-background';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    setTimeout(() => {
+      moveToBackground();
+      
+    }, 6000);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>This app will disapear in 6s</Text>
     </View>
   );
 }
